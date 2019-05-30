@@ -24,8 +24,25 @@ To test your changes locally, run `jekyll serve`. For example using Docker:
 
 > docker run -p 4000:4000 -v $(pwd):/srv/jekyll -it --rm jekyll/jekyll jekyll serve
 
+Notes:
+- For PowerShell users, replace the parentheses with brackets (Change ```$(pwd)``` to ```${pwd}```)
+- If Jekyll is not automatically regenerating the site after files are modified, add the build command flags: ```--watch``` and ```--force_polling``` to the end of the above command
+
 Site will be available at: http://localhost:4000/ore-ero/
 ______________________
+
+#### Javascript
+
+If you're working on Javascript in the `/assets/js/src` folder, make sure your code follows the style guidelines. We use ES Lint for checking code style. Ensure you have a recent version of Node.js (>=10.15.3). Run the following to install dependencies. 
+
+``` bash
+npm install
+```
+
+Now when you want to know if your code is following the guidelines, run 
+``` bash
+npm run lint
+```
 
 ## Échange de ressources ouvert
 
@@ -48,5 +65,9 @@ Sauf indication contraire, le code source de ce projet est protégé par le droi
 Pour tester vos modifications localement, exécuter `jekyll serve`. Par exemple avec Docker:
 
 > docker run -p 4000:4000 -v $(pwd):/srv/jekyll -it --rm jekyll/jekyll jekyll serve
+
+Remarques:
+- Pour les utilisateurs de PowerShell, remplacez les parenthèses par des crochets (Modifiez ```$(pwd)``` en ```${pwd}```)
+- Si Jekyll ne régénère pas automatiquement le site une fois les fichiers modifiés, ajoutez les indicateurs: ```--watch``` et ```--force_polling``` à la fin de la commande ci-dessus
 
 Le site sera disponible au: http://localhost:4000/ore-ero/
